@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var number1 = prompt("Please enter a number.");
+  
+
+  if (!isNaN(number1)) {
+      number1 = parseInt(number1);
+      var operator = prompt("Please enter an operator.");
+      switch (operator) {
+          case "+":
+          case "-":
+          case "/":
+          case "*":
+          case "%":
+              var number2 = prompt("Please enter another number.");
+              if (!isNaN(number2)) {
+                  number2 = parseInt(number2);
+                  if (operator == "+") {
+                      console.log(`${number1} + ${number2} = ${
+                          number1 + number2
+                      }`);
+                  } else if (operator == "-") {
+                      console.log(`${number1} - ${number2} = ${
+                          number1 - number2
+                      }`);
+                  } else if (operator == "/") {
+                      console.log(`${number1} / ${number2} = ${
+                          number1 / number2
+                      }`);
+                  } else if (operator == "*") {
+                      console.log(`${number1} * ${number2} = ${
+                          number1 * number2
+                      }`);
+                  } else if (operator == "%") {
+                      console.log(`${number1} % ${number2} = ${
+                          number1 % number2
+                      }`);
+                  }
+              } 
+  else {
+                  alert("Input invalid! Should be a number.");
+              }
+          break;
+          
+          default:
+              alert("Input is invalid! Should be +, -, /, *, or %.");
+              break;
+      }
+  } else {
+      alert("Input invalid! Should be a number.");
+  }
+
+        
+    </script>
+    
+</body>
+</html>
